@@ -15,7 +15,7 @@ This project demonstrates the use of the ESP32's built-in capacitive touch senso
 
 * ESP32 Development Board
 * LED
-* 220Ω Resistor
+* Touch Sensor
 * Jumper Wires
 * Breadboard
 
@@ -23,8 +23,8 @@ This project demonstrates the use of the ESP32's built-in capacitive touch senso
 
 | Component        | ESP32 Pin                       |
 | ---------------- | ------------------------------- |
-| Touch Sensor Pin | Touch GPIO Pin (e.g., T0/GPIO4) |
-| LED Anode (+)    | Digital Output Pin              |
+| Touch Sensor Pin | Touch GPIO Pin (GPIO4) |
+| LED Anode (+)    | Digital Output Pin (GPIO13)     |
 | LED Cathode (-)  | GND (through resistor)          |
 
 ## Working Principle
@@ -76,10 +76,8 @@ https://github.com/PandrangiJahnavi/ESP32_Touch_Sensor_Project/blob/main/TOUCH%2
 ## Applications
 
 * Smart Touch Switches
-* Home Automation Systems
-* Interactive IoT Devices
 * Touch-Controlled Lighting
-* Human-Machine Interface Projects
+
 
 ## Future Enhancements
 
