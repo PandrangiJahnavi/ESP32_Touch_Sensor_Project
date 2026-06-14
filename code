@@ -1,0 +1,31 @@
+// Define the pin numbers
+const int touchSensorPin = 4;  // Pin connected to the OUT of the touch sensor
+const int ledPin = 13;         // Pin connected to the LED
+
+void setup() {
+  // Start the serial communication for debugging
+  Serial.begin(9600);
+
+  // Set the touch sensor pin as input
+  pinMode(touchSensorPin, INPUT);
+  
+  // Set the LED pin as output
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // Read the touch sensor input
+  int touchState = digitalRead(touchSensorPin);
+
+  // If the sensor is touched (sensor is HIGH)
+  if (touchState == HIGH) {
+    digitalWrite(ledPin, HIGH);  // Turn on the LED
+    Serial.println("Touched! LED ON");
+  } else {
+    digitalWrite(ledPin, LOW);   // Turn off the LED
+    Serial.println("Not Touched! LED OFF");
+  }
+
+  // Small delay for debouncing the touch
+  delay(2000);
+}
